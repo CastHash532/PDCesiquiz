@@ -2,7 +2,7 @@ package quiz;
 
 import java.io.Serializable;
 
-public abstract class Question implements Evaluation, Serializable {
+public abstract class Question implements Evaluation, Serializable{
 
     private String nom;
 
