@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SeConnecterController">
+    <top>
+        <Pane prefHeight="60.0" prefWidth="860.0" BorderPane.alignment="CENTER">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0" />
+                <Label alignment="CENTER" layoutX="40.0" layoutY="24.0" text="Connexion" textAlignment="CENTER" textFill="#272727">
+                    <font>
+                        <Font name="Metropolis Bold" size="32.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </top>
+    <center>
+        <VBox layoutX="40.0" layoutY="60.0" prefHeight="200.0" prefWidth="100.0" spacing="32.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="0.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Nom d'utilisateur" textFill="#272727">
+                            <font>
+                                <Font name="Metropolis-Regular" size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="nomUtilisateur" scaleX="1.5">
+                            <HBox.margin>
+                                <Insets left="95.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="0.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Mot de passe" textFill="#272727">
+                            <font>
+                                <Font name="Metropolis-Regular" size="16.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="motDePasseUtilisateur" scaleX="1.5">
+                            <HBox.margin>
+                                <Insets left="122.0" />
+                            </HBox.margin>
+                        </PasswordField>
+                    </children>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <Button mnemonicParsing="false" onAction="#seConnecter" text="Se connecter" textAlignment="CENTER" textFill="#272727">
+                    <VBox.margin>
+                        <Insets left="48.0" right="30.0" />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="10.0" left="120.0" right="120.0" top="10.0" />
+                    </padding>
+                    <font>
+                        <Font name="Metropolis_YASSIR_SemiBold" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <BorderPane.margin>
+                <Insets bottom="24.0" left="24.0" right="24.0" top="34.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="30.0" left="60.0" right="60.0" top="20.0" />
+            </padding>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox prefHeight="35.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="20.0" right="20.0" />
+            </BorderPane.margin>
+            <children>
+                
+                <Label text="ESI QUIZ" textFill="#272727">
+                    <font>
+                        <Font name="Metropolis Bold" size="20.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                    </HBox.margin>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

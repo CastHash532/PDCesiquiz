@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.WelcomeScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c020d" height="500.0" stroke="TRANSPARENT" strokeType="INSIDE" width="800.0" />
+      <ImageView fitHeight="428.0" fitWidth="800.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@19955.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="140.0" layoutY="60.0" text="ESI QUIZ" textFill="WHITE">
+         <font>
+            <Font name="Metropolis Bold" size="90.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="120.0" fitWidth="84.0" layoutX="40.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ESI%20logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="380.0" text="présenté par Nabil otsmane et abdelmadjid bouiken bahi amar" textFill="WHITE">
+         <font>
+            <Font name="Metropolis_YASSIR_SemiBold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="405.0" text="encadré par Mme N.Bousbia" textFill="WHITE">
+         <font>
+            <Font name="Metropolis_YASSIR_SemiBold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
