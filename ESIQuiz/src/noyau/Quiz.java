@@ -11,8 +11,9 @@ import java.util.Iterator;
 import quiz.Question;
 import quiz.Reponse;
 
-public class Quiz implements Serializable {
+public class Quiz implements Serializable, Subject {
 
+    private HashSet<QuizObserver> observers;
     private HashSet<Question> questions;
     private HashSet<Notion> notions;
 
@@ -229,7 +230,6 @@ public class Quiz implements Serializable {
         return nom;
     }
 
-    //gérer le memento
     public QuizMemento getMemento() {
         return new QuizMemento(this);
     }
@@ -242,6 +242,20 @@ public class Quiz implements Serializable {
         this.notions = memento.getNotions();
     }
 
+
+    //observer
+    public void addObserver(Observer o) {
+        observers.add(o);
+    }
+
+    public void removeObserver(Observer o) {
+        observers.remove(o);
+    }
+
+    public void notifyObservers() {
+        for(Observer o : observers)
+            o.update(this);
+    }
 
 }
 

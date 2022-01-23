@@ -10,6 +10,9 @@ import quiz.Reponse;
 
 public class Apprenant extends Compte implements Comparable<Apprenant>, Serializable {
 
+
+    //add quiz observer
+    private QuizObserver quizObserver;
     private String nom;
     private String prenom;
     private LocalDate dateDeNaissance;
