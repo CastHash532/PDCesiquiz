@@ -8,9 +8,20 @@ public class ESIQuiz implements Serializable {
 
     private HashSet<Compte> comptes;
 
-    public ESIQuiz() {
+    //Singleton
+    private static ESIQuiz instance = null;
+
+    private ESIQuiz() {
         comptes = new HashSet<Compte>();
     }
+
+    public static ESIQuiz getInstance() {
+        if (instance == null) {
+            instance = new ESIQuiz();
+        }
+        return instance;
+    }
+
 
     public boolean ajouterCompte(Compte c) {
         return comptes.add(c);
