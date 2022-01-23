@@ -15,7 +15,7 @@ public class Apprenant extends Compte implements Comparable<Apprenant>, Serializ
     private LocalDate dateDeNaissance;
     private String adresse;
 
-    private HashMap<Quiz, Reponse[]> reponses;
+    //private HashMap<Quiz, Reponse[]> reponses;
 
     private List<Quiz> quizAccomplis;
 
@@ -62,7 +62,7 @@ public class Apprenant extends Compte implements Comparable<Apprenant>, Serializ
         this.adresse = adresse;
     }
 
-    public void ajouterReponses(Quiz quiz, Reponse[] reponses) {
+    /*public void ajouterReponses(Quiz quiz, Reponse[] reponses) {
         this.reponses.put(quiz, reponses);
     }
 
@@ -101,7 +101,7 @@ public class Apprenant extends Compte implements Comparable<Apprenant>, Serializ
 
     public void ajouterQuizAccompli(Quiz q) {
         this.quizAccomplis.add(q);
-    }
+    }*/
 
     private double tauxReussiteMoyen(Apprenant a) {
         HashMap<Quiz, Reponse[]> reps = a.getQuizAccomplis();

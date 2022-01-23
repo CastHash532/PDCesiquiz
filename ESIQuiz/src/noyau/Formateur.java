@@ -6,25 +6,30 @@ import java.util.Iterator;
 
 public class Formateur extends Compte implements Serializable {
 
-    private Formation formation = null;
+    private Set<GestionnaireFormation> gestionnairesFormation;
 
     public Formateur(String nomUtilisateur, String motDePasse) {
         super(nomUtilisateur, motDePasse);
     }
 
     public void setFormation(Formation f) {
-        formation = f;
+        this.gestionnairesFormation.add(new GestionnaireFormation(f));
     }
 
     public Formation getFormation() {
-        return formation;
+        return this.gestionnairesFormation.iterator().next().getFormation();
     }
 
-    public boolean estDansFormation(Apprenant a) {
-        return formation.contient(a);
+    public void setGestionnairesFormation(Set<GestionnaireFormation> gestionnairesFormation) {
+        this.gestionnairesFormation = gestionnairesFormation;
     }
 
-    public boolean ajouterQuiz(Quiz q) {
+    public Set<GestionnaireFormation> getGestionnairesFormation() {
+        return this.gestionnairesFormation;
+    }
+
+
+    /*public boolean ajouterQuiz(Quiz q) {
         return formation.ajouterQuiz(q);
     }
 
@@ -56,7 +61,7 @@ public class Formateur extends Compte implements Serializable {
         Apprenant[] app = formation.getTableauApprenants();
         Arrays.sort(app);
         return app;
-    }
+    }*/
 
     public String toString() {
         return getNomUtilisateur();
