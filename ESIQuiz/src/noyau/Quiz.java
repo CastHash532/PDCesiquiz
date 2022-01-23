@@ -228,4 +228,75 @@ public class Quiz implements Serializable {
     {
         return nom;
     }
+
+    //gérer le memento
+    public QuizMemento getMemento() {
+        return new QuizMemento(this);
+    }
+
+    public void setMemento(QuizMemento memento) {
+        this.nom = memento.getNom();
+        this.dateOuverture = memento.getDateOuverture();
+        this.dateExpiration = memento.getDateExpiration();
+        this.questions = memento.getQuestions();
+        this.notions = memento.getNotions();
+    }
+
+
+}
+
+private class QuizMemento {
+    private String nom;
+    private LocalDate dateOuverture;
+    private LocalDate dateExpiration;
+    private Set<Question> questions;
+    private Set<Notion> notions;
+
+    public QuizMemento(Quiz q) {
+        nom = q.getNom();
+        dateOuverture = q.getDateOuverture();
+        dateExpiration = q.getDateExpiration();
+        questions = q.getQuestions();
+        notions = q.getNotions();
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public LocalDate getDateOuverture() {
+        return dateOuverture;
+    }
+
+    public void setDateOuverture(LocalDate dateOuverture) {
+        this.dateOuverture = dateOuverture;
+    }
+
+    public LocalDate getDateExpiration() {
+        return dateExpiration;
+    }
+
+    public void setDateExpiration(LocalDate dateExpiration) {
+        this.dateExpiration = dateExpiration;
+    }
+
+    public Set<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(Set<Question> questions) {
+        this.questions = questions;
+    }
+
+    public Set<Notion> getNotions() {
+        return notions;
+    }
+
+    public void setNotions(Set<Notion> notions) {
+        this.notions = notions;
+    }
 }
